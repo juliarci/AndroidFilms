@@ -14,7 +14,7 @@ class Repository @Inject constructor(
     private val filmDao: FilmDao,
     private val serieDao: SerieDao
 ) {
-    private val apiKey = "ca096d89c07f759c710e701ad181fd06"
+    private val apiKey = "CLE_API_TMDB" // à remplacer par une clé TMDB
 
     suspend fun searchMovies(keyWord: String): List<Movie> {
         val tmdbResult = tmdbApi.getFilmsByKeyWord(apiKey, keyWord)
